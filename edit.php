@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "eddie";
 $password = "root";
 $dbname = "panera";
 
@@ -12,13 +12,13 @@ if ($conn->connect_error) {
 } 
 
 
-$sql = "UPDATE users1 SET first_name= '".$_POST[fname]."' ,    last_name='".$_POST[lname]."' WHERE id='".$_POST[id]."'";
+$sql = "UPDATE user1 SET first_name= '".$_POST[fname]."' ,    last_name='".$_POST[lname]."' WHERE id='".$_POST[id]."'";
 
 $conn->query($sql);
 
 	
 $conn->close();
-header("Location: /"); 
+header("Location: /panera"); 
 exit();
 
 ?>

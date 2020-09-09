@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "eddie";
 $password = "root";
 $dbname = "panera";
 
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT into users1 (first_name, last_name) values ('".$_POST['fname']."', '".$_POST['lname']."')";
+$sql = "INSERT into user1 (first_name, last_name) values ('".$_POST['fname']."', '".$_POST['lname']."')";
 
 
 $conn->query($sql);
@@ -20,9 +20,7 @@ $conn->query($sql);
 $conn->close();
 
 
-
-
-header("Location: /"); 
+header("Location: /panera"); 
 exit();
 
 ?>

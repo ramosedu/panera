@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "eddie";
 $password = "root";
 $dbname = "panera";
 
@@ -12,13 +12,13 @@ if ($conn->connect_error) {
 } 
 
 
-$sql = "DELETE FROM users1 WHERE id= '".$_GET[id]."' ";
+$sql = "DELETE FROM user1 WHERE id= '".$_GET[id]."' ";
 
 $conn->query($sql);
 
 	
 $conn->close();
-header("Location: /"); 
+header("Location: /panera"); 
 exit();
 
 ?>
